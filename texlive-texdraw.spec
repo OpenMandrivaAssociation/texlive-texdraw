@@ -80,3 +80,16 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_infodir}
 mv %{buildroot}%{_texmfdir}/doc/info/*.info %{buildroot}%{_infodir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20091010-2
++ Revision: 756618
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20091010-1
++ Revision: 719683
+- texlive-texdraw
+- texlive-texdraw
+- texlive-texdraw
+
