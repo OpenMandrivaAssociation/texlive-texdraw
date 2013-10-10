@@ -1,12 +1,12 @@
-# revision 23717
+# revision 29725
 # category Package
 # catalog-ctan /graphics/texdraw
-# catalog-date 2009-10-10 00:51:28 +0200
+# catalog-date 2012-06-05 21:37:17 +0200
 # catalog-license other-free
 # catalog-version undef
 Name:		texlive-texdraw
-Version:	20091010
-Release:	2
+Version:	20120605
+Release:	1
 Summary:	Graphical macros, using embedded PostScript
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/texdraw
@@ -44,6 +44,7 @@ drawing segments.
 %{_texmfdistdir}/tex/generic/texdraw/texdraw.tex
 %{_texmfdistdir}/tex/generic/texdraw/txdps.tex
 %{_texmfdistdir}/tex/generic/texdraw/txdtools.tex
+%doc %{_infodir}/texdraw.info*
 %doc %{_texmfdistdir}/doc/support/texdraw/getopt.c
 %doc %{_texmfdistdir}/doc/support/texdraw/getopt.h
 %doc %{_texmfdistdir}/doc/support/texdraw/texdraw.cps
@@ -67,7 +68,6 @@ drawing segments.
 %doc %{_texmfdistdir}/doc/support/texdraw/texindex.c
 %doc %{_texmfdistdir}/doc/support/texdraw/txdexamp.latex
 %doc %{_texmfdistdir}/doc/support/texdraw/txdexamp.tex
-%doc %{_infodir}/texdraw.info*
 
 #-----------------------------------------------------------------------
 %prep
@@ -76,20 +76,7 @@ drawing segments.
 %build
 
 %install
-mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+mkdir -p %{buildroot}%{_texmfdistdir}
+cp -fpar tex doc %{buildroot}%{_texmfdistdir}
 mkdir -p %{buildroot}%{_infodir}
-mv %{buildroot}%{_texmfdir}/doc/info/*.info %{buildroot}%{_infodir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20091010-2
-+ Revision: 756618
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20091010-1
-+ Revision: 719683
-- texlive-texdraw
-- texlive-texdraw
-- texlive-texdraw
-
+mv %{buildroot}%{_texmfdistdir}/doc/info/*.info %{buildroot}%{_infodir}
