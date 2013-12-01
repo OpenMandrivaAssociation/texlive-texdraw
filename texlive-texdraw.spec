@@ -1,4 +1,4 @@
-# revision 29725
+# revision 31894
 # category Package
 # catalog-ctan /graphics/texdraw
 # catalog-date 2012-06-05 21:37:17 +0200
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-texdraw
 Version:	20120605
-Release:	1
+Release:	2
 Summary:	Graphical macros, using embedded PostScript
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/texdraw
@@ -42,32 +42,18 @@ drawing segments.
 %{_texmfdistdir}/tex/generic/texdraw/blockdiagram.tex
 %{_texmfdistdir}/tex/generic/texdraw/texdraw.sty
 %{_texmfdistdir}/tex/generic/texdraw/texdraw.tex
+%{_texmfdistdir}/tex/generic/texdraw/txdexamp.latex
+%{_texmfdistdir}/tex/generic/texdraw/txdexamp.tex
 %{_texmfdistdir}/tex/generic/texdraw/txdps.tex
 %{_texmfdistdir}/tex/generic/texdraw/txdtools.tex
 %doc %{_infodir}/texdraw.info*
-%doc %{_texmfdistdir}/doc/support/texdraw/getopt.c
-%doc %{_texmfdistdir}/doc/support/texdraw/getopt.h
+%doc %{_texmfdistdir}/doc/support/texdraw/ChangeLog
+%doc %{_texmfdistdir}/doc/support/texdraw/README
 %doc %{_texmfdistdir}/doc/support/texdraw/texdraw.cps
 %doc %{_texmfdistdir}/doc/support/texdraw/texdraw.fns
-%doc %{_texmfdistdir}/doc/support/texdraw/texdraw.pdf
+%doc %{_texmfdistdir}/doc/support/texdraw/texdraw.ps
 %doc %{_texmfdistdir}/doc/support/texdraw/texdraw.texi
-%doc %{_texmfdistdir}/doc/support/texdraw/texdraw_1.html
-%doc %{_texmfdistdir}/doc/support/texdraw/texdraw_10.html
-%doc %{_texmfdistdir}/doc/support/texdraw/texdraw_11.html
-%doc %{_texmfdistdir}/doc/support/texdraw/texdraw_2.html
-%doc %{_texmfdistdir}/doc/support/texdraw/texdraw_3.html
-%doc %{_texmfdistdir}/doc/support/texdraw/texdraw_4.html
-%doc %{_texmfdistdir}/doc/support/texdraw/texdraw_5.html
-%doc %{_texmfdistdir}/doc/support/texdraw/texdraw_6.html
-%doc %{_texmfdistdir}/doc/support/texdraw/texdraw_7.html
-%doc %{_texmfdistdir}/doc/support/texdraw/texdraw_8.html
-%doc %{_texmfdistdir}/doc/support/texdraw/texdraw_9.html
-%doc %{_texmfdistdir}/doc/support/texdraw/texdraw_foot.html
-%doc %{_texmfdistdir}/doc/support/texdraw/texdraw_toc.html
-%doc %{_texmfdistdir}/doc/support/texdraw/texi2dvi
-%doc %{_texmfdistdir}/doc/support/texdraw/texindex.c
-%doc %{_texmfdistdir}/doc/support/texdraw/txdexamp.latex
-%doc %{_texmfdistdir}/doc/support/texdraw/txdexamp.tex
+%doc %{_texmfdistdir}/doc/support/texdraw/txi-src.tgz
 
 #-----------------------------------------------------------------------
 %prep
