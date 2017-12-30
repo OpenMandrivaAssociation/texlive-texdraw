@@ -5,8 +5,8 @@
 # catalog-license other-free
 # catalog-version undef
 Name:		texlive-texdraw
-Version:	20120605
-Release:	10
+Version:	20170414
+Release:	1
 Summary:	Graphical macros, using embedded PostScript
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/texdraw
