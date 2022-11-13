@@ -1,18 +1,12 @@
-# revision 31894
-# category Package
-# catalog-ctan /graphics/texdraw
-# catalog-date 2012-06-05 21:37:17 +0200
-# catalog-license other-free
-# catalog-version undef
 Name:		texlive-texdraw
-Version:	20190331
+Version:	64477
 Release:	1
 Summary:	Graphical macros, using embedded PostScript
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/texdraw
 License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdraw.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdraw.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdraw.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdraw.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -30,34 +24,22 @@ capability, new drawing commands can be constructed from
 drawing segments.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/generic/texdraw/blockdiagram.tex
-%{_texmfdistdir}/tex/generic/texdraw/texdraw.sty
-%{_texmfdistdir}/tex/generic/texdraw/texdraw.tex
-%{_texmfdistdir}/tex/generic/texdraw/txdexamp.latex
-%{_texmfdistdir}/tex/generic/texdraw/txdexamp.tex
-%{_texmfdistdir}/tex/generic/texdraw/txdps.tex
-%{_texmfdistdir}/tex/generic/texdraw/txdtools.tex
+%{_texmfdistdir}/tex/generic/texdraw
 %doc %{_infodir}/texdraw.info*
-%doc %{_texmfdistdir}/doc/support/texdraw/ChangeLog
-%doc %{_texmfdistdir}/doc/support/texdraw/README
-%doc %{_texmfdistdir}/doc/support/texdraw/texdraw.cps
-%doc %{_texmfdistdir}/doc/support/texdraw/texdraw.fns
-%doc %{_texmfdistdir}/doc/support/texdraw/texdraw.ps
-%doc %{_texmfdistdir}/doc/support/texdraw/texdraw.texi
-%doc %{_texmfdistdir}/doc/support/texdraw/txi-src.tgz
+%doc %{_texmfdistdir}/doc/support/texdraw
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
