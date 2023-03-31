@@ -1,6 +1,6 @@
 Name:		texlive-texdraw
 Version:	64477
-Release:	1
+Release:	2
 Summary:	Graphical macros, using embedded PostScript
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/texdraw
