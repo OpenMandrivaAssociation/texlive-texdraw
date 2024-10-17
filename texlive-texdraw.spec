@@ -3,7 +3,7 @@ Version:	64477
 Release:	2
 Summary:	Graphical macros, using embedded PostScript
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/texdraw
+URL:		https://www.ctan.org/tex-archive/graphics/texdraw
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdraw.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdraw.doc.r%{version}.tar.xz
