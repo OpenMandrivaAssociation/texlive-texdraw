@@ -1,50 +1,27 @@
-Name:		texlive-texdraw
-Version:	64477
-Release:	2
+%global tl_name texdraw
+%global tl_revision 64477
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	v2r3
+Release:	%{tl_revision}.1
 Summary:	Graphical macros, using embedded PostScript
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/graphics/texdraw
-License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdraw.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdraw.doc.r%{version}.tar.xz
+License:	cc-by-4
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/texdraw.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/texdraw.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-TeXdraw is a set of macro definitions for TeX, which allow the
-user to produce PostScript drawings from within TeX and LaTeX.
-TeXdraw has been designed to be extensible. Drawing 'segments'
-are relocatable, self-contained units. Using a combination of
-the TeX's grouping mechanism and the gsave/grestore mechanism
-in PostScript, drawing segments allow for local changes to the
-scaling and line parameters. Using TeX's macro definition
-capability, new drawing commands can be constructed from
-drawing segments.
+TeXdraw is a set of macro definitions for TeX, which allow the user to
+produce PostScript drawings from within TeX and LaTeX. TeXdraw has been
+designed to be extensible. Drawing 'segments' are relocatable, self-
+contained units. Using a combination of TeX's grouping mechanism and the
+gsave/grestore mechanism in PostScript, drawing segments allow for local
+changes to the scaling and line parameters. Using TeX's macro definition
+capability, new drawing commands can be constructed from drawing
+segments.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/generic/texdraw
-%doc %{_infodir}/texdraw.info*
-%doc %{_texmfdistdir}/doc/support/texdraw
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_infodir}
-mv %{buildroot}%{_texmfdistdir}/doc/info/*.info %{buildroot}%{_infodir}
